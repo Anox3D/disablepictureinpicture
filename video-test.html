@@ -1,36 +1,11 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang>
     <head>
         <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <!-- Open Graph Protocol -->
-        <meta property="og:type" content="website">
-        <meta property="og:site_name" content="Strime">
-        <meta property="og:keywords" content="Strime,Streaming,Gratuit,Petits producteurs,Cinéastes,Courts-métrages,Moyens-métrages,Longs-métranges,Séries,Films">
-        <meta property="og:title" content="Strime - LA plateforme de streaming pour les petits réalisateurs !">
-        <meta property="og:description" content="Vous ne savez pas quoi regarder ? Essayez Strime ! La plateforme vous offre un choix de courts, longs et moyens-métrages, mais également des séries ! Ce service est aussi totalement gratuit !">
-        <meta property="og:image" content=".../images/strime-logo-text.svg">
-        <!-- Title and Icon -->
-        <title>Strime</title>
-        <link rel="icon" href="../images/strime-icon.png">
-        <!-- Font -->
-        <link rel="preconnect" href="https://fonts.gstatic.com">
-        <link href="https://fonts.googleapis.com/css2?family=Cabin:wght@400;500;600;700&display=swap" rel="stylesheet">
         <!-- Style -->
-        <link href="../css/main-style.css" rel="stylesheet">
         <link href="https://vjs.zencdn.net/7.10.2/video-js.css" rel="stylesheet">
-        <link href="../css/videojs-resolution-switcher-v7.css" rel="stylesheet">
-        <link href="../css/player.css" rel="stylesheet">
     </head>
     <body>
-        <!-- Header -->
-        <header>
-            <div class="header-logo">
-                <a href="../index.html"><img src="../images/strime-logo-text.svg" height="42px"></a>
-            </div>
-        <header>
-        <!-- Content -->
-        <div class="content">
             <video
                 id="video_1"
                 class="video-js vjs-big-play-centered"
@@ -47,60 +22,8 @@
                     }
                 }'>
                 <source src="../videos/video_composing_test/trombone-landry_1080p.mp4" type="video/mp4" label="1080p">
-                <source src="../videos/video_composing_test/trombone-landry_720p.mp4" type="video/mp4" label="720p">
-                <source src="../videos/video_composing_test/trombone-landry_480p.mp4" type="video/mp4" label="480p">
-                <source src="../videos/video_composing_test/trombone-landry_360p.mp4" type="video/mp4" label="360p">
             </video>
-        </div>
-        <!-- Global site tag (gtag.js) - Google Analytics -->
-        <script async src="https://www.googletagmanager.com/gtag/js?id=G-3M1NG1DHYM"></script>
-        <script>
-            window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
-            gtag('js', new Date());
-
-            gtag('config', 'G-3M1NG1DHYM');
-        </script>
         <!-- Video.js Scripts -->
         <script src="https://vjs.zencdn.net/7.10.2/video.min.js"></script>
-        <script src="../js/videojs-resolution-switcher-v7.js"></script>
-        <script>
-            videojs('video', {
-                controls: true,
-                plugins: {
-                    videoJsResolutionSwitcher: {
-                        default: 'low', // Default resolution [{Number}, 'low', 'high']
-                        dynamicLabel: true // Display dynamic labels or gear symbol
-                    }
-                }
-            }, function(){
-
-                player.updateSrc([
-                    {
-                        src: '../videos/video_composing_test/trombone-landry_360p.mp4',
-                        type: 'video/mp4',
-                        label: '360p'
-                    },
-                    {
-                        src: '../videos/video_composing_test/trombone-landry_480p.mp4',
-                        type: 'video/mp4',
-                        label: '480p'
-                    },
-                    {
-                        src: '../videos/video_composing_test/trombone-landry_720p.mp4',
-                        type: 'video/mp4',
-                        label: '720p'
-                    },
-                    {
-                        src: '../videos/video_composing_test/trombone-landry_1080p.mp4',
-                        type: 'video/mp4',
-                        label: '1080p'
-                    }
-                ])
-            });
-        </script>
-        <script>
-            videojs('video_1').videoJsResolutionSwitcher();
-        </script>
     </body>
 </html>
