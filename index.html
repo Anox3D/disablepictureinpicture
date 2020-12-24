@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <!-- Style -->
+        <link href="https://vjs.zencdn.net/7.10.2/video-js.css" rel="stylesheet">
+    </head>
+    <body>
+            <video
+                id="video_1"
+                class="video-js vjs-big-play-centered"
+                controls
+                disablePictureInPicture
+                preload="auto"
+                poster="../video_files/video_composing_test/trombone-landry_thumbnail.jpg"
+                width="720"
+                data-setup='{
+                    "controlBar": {
+                        "volumePanel": {
+                            "inline": false
+                        }
+                    }
+                }'>
+                <source src="../videos/video_composing_test/trombone-landry_1080p.mp4" type="video/mp4" label="1080p">
+            </video>
+        <!-- Video.js Scripts -->
+        <script src="https://vjs.zencdn.net/7.10.2/video.min.js"></script>
+    </body>
+</html>
