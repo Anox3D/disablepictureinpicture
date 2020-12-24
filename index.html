@@ -5,22 +5,30 @@
         <link href="https://vjs.zencdn.net/7.10.2/video-js.css" rel="stylesheet">
     </head>
     <body>
+        <video
+            id="video_1"
+            class="video-js vjs-big-play-centered"
+            controls
+            disablePictureInPicture
+            preload="auto"
+            width="720"
+            data-setup='{}'>
+            <source src="https://vjs.zencdn.net/v/oceans.mp4" type="video/mp4">
+        </video>
+        <p>Video code:</p>
+        <pre><code>
             <video
-                id="video_1"
-                class="video-js vjs-big-play-centered"
-                controls
-                disablePictureInPicture
-                preload="auto"
-                width="720"
-                data-setup='{
-                    "controlBar": {
-                        "volumePanel": {
-                            "inline": false
-                        }
-                    }
-                }'>
-                <source src="https://vjs.zencdn.net/v/oceans.mp4" type="video/mp4">
-            </video>
+            id="video_1"
+            class="video-js vjs-big-play-centered"
+            controls
+            disablePictureInPicture
+            preload="auto"
+            width="720"
+            data-setup='{}'>
+            <source src="https://vjs.zencdn.net/v/oceans.mp4" type="video/mp4">
+        </video>
+        </code></pre>
+       
         <script src="https://vjs.zencdn.net/7.10.2/video.min.js"></script>
     </body>
 </html>
